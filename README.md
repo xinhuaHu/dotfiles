@@ -2,7 +2,7 @@
 
 | 文件夹 | 说明 |
 | --- | --- |
-| hypr | hyprland 的配置文件包括样式的主题 |
+| hypr | hyprland 的配置文件 |
 | kitty | 终端配置文件 |
 | mako | 通知样式 |
 | waybar | waybar 的配置和主题文件 |
