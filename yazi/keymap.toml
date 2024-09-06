@@ -109,7 +109,7 @@ keymap = [
 	{ on = [ "D" ],         run = [ "remove --permanently", "escape --visual --select" ], desc = "Permanently delete the files" },
 
 	# Create
-	{ on = [ "M" ],         run = "shell 'mkdir '",                                          desc = "Create a file or directory (ends with / for directories)" },
+	{ on = [ "M" ],         run = "shell 'mkdir ' --interactive",                                          desc = "Create a file or directory (ends with / for directories)" },
 	{ on = [ "T" ],         run = "create",                                               desc = "Create a file or directory (ends with / for directories)" },
 
 	# Rename
