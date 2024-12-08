@@ -79,12 +79,21 @@
     //     "interval": 2,
     //     "on-click-right": "~/.config/waybar/network.py"
     // },
+    // "network": {
+    //     "tooltip": false,
+    //     "format": "{ifname}",
+    //     "format-wifi": "<span color='#b4befe'>  </span> {essid}",
+    //     "format-ethernet": "{ipaddr}/{cidr} ",
+    //     "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+    //     "interface": "wlan0"
+    // },
     "network": {
-        "tooltip": false,
-        "format": "{ifname}",
         "format-wifi": "<span color='#b4befe'>  </span> {essid}",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+        "format-ethernet": "\uf796 {bandwidthUpBits} {bandwidthDownBits}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip-format": " {ifname} {ipaddr}/{cidr} via {gwaddr}",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "interface": "wlan0"
     },
     "temperature": {
@@ -176,8 +185,30 @@
     //     "on-click": "~/.config/eww/scripts/toggle_control_center.sh"
     // },
     "clock": {
-        "format": "{:%R 📅 %d/%m/%Y}",
-        "tooltip": false
+        "interval": 1,
+        "format": "\uf133 {:%Y-%m-%d %H:%M}",
+        "tooltip-format": "{calendar}",
+		"timezone": "Asia/Shanhai",
+        "calendar": {
+            "mode"          : "month",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#ffead3'>{}</span>",
+                "days":       "<span color='#ecc6d9'>{}</span>",
+                "weeks":      "<span color='#99ffdd'>W{}</span>",
+                "weekdays":   "<span color='#ffcc66'>{}</span>",
+                "today":      "<span color='#ff6699'><u>{}</u></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
     },
     // "backlight": {
     //     "device": "intel_backlight",
