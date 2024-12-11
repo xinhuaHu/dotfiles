@@ -2,12 +2,14 @@
 
 | 文件夹 | 说明 |
 | --- | --- |
-| hypr | hyprland 的配置文件 |
+| hypr | hyprland 的配置文件夹 |
 | kitty | 终端配置文件 |
 | mako | 通知样式 |
 | waybar | waybar 的配置和主题文件 |
 | wofi | wofi 的配置文件 |
-| yazi | 使用 [config](https://github.com/cap153/config) 的是 yazi 文件夹内容  |
+| yazi | 使用的 [config](https://github.com/cap153/config) 是 yazi 文件夹内容  |
+| hyprlock | 锁屏软件 |
+| hyprshot | 截图软件 |
 
 桌面背景使用的是 `swaybg` 使用 `shell` 脚本进行切换，脚本文件统一保存在 `~/script` 文件夹下
 
