@@ -27,3 +27,10 @@ JetBrains
 trashrc
 baloofileinformationrc
 flameshot/*
+htop/
+io.*
+obs*
+powerkit/*
+session/*
+autostart/*
+kiorc
