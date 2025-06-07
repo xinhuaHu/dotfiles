@@ -134,4 +134,7 @@ function Status:render(area)
 	}
 end
 
-
+-- 智能进入目录或打开文件
+require("smart-enter"):setup {
+	open_multi = true,
+}

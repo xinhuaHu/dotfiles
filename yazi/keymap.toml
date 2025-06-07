@@ -3,6 +3,10 @@
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
 [mgr]
+[prepend_keymap]
+on   = "l"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
 
 prepend_keymap = [
 	# 智能进入目录或打开文件

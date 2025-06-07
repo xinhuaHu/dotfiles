@@ -1,0 +1,32 @@
+插件
+
+## smart-enter.yazi
+
+#### Installation
+
+```bash
+ya pkg add yazi-rs/plugins:smart-enter
+```
+
+#### Usage
+
+Bind your `l` key to the plugin, in your ~/.config/yazi/keymap.toml:
+
+```toml
+[[mgr.prepend_keymap]]
+on   = "l"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+```
+
+#### Advanced
+
+By default, --hovered is passed to the open command, make the behavior consistent with enter avoiding accidental triggers, which means both will only target the currently hovered file.
+
+If you still want open to target multiple selected files, add this to your `~/.config/yazi/main.lua:`
+
+```lua
+require("smart-enter"):setup {
+	open_multi = true,
+}
+```
